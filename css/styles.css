@@ -1,0 +1,31 @@
+/* Estilos Generales*/
+body {
+    background-color: #0B1118;
+    font-family: "PT Serif Caption", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.nombreH1 {
+    font-family: Georgia;
+    color: #FF7A18;
+    font-size: 4rem;
+}
+h2,h4,p,article,footer {
+    color: #38BDF8;
+}
+/*Header*/
+h1 {
+    font-size: 3rem;
+}
+/*Nav*/
+li,
+a:link {
+    font-size: 1.5rem;
+    color: #FF7A18;
+}
+a{text-decoration: none;}
+
+a:visited {
+    color: #994910;
+}
+/*Footer*/
