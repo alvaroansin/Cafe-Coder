@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap" rel="stylesheet">
-    <title>Cafe Coder | Envios</title>
+    <title> Coder Café | Envios</title>
 
- </head>
-  <body>
-    <header>
-        <h1 class="nombreH1"> Café Coder </h1>
-        <h2>Perfecto para aprender y disfrutar de un café</h2>
-        <nav>
-         <ul>
-          <li><a href="./menu.html">Menu</a></li>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li><a href="./sobrenosotros.html">Sobre Nosotros</a></li>
-         </ul>
-    </nav>
+</head>
+
+<body>
+    <header class="header1">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="marca" href="../index.html">
+                <img src="../assets/icons/logo.png" alt="Coder Café" class="marca_logo">
+            </a>
+
+            <ul class="nav_menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./menu.html">Menú</a></li>
+                <li><a href="./envios.html">Envíos</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./sobrenosotros.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
-        <h3>Envíos a domicilio</h3>
-        <p>En Café Coder preparamos tu pedido y te lo llevamos directamente a casa.</p>
+        <section class="contenido1_section">
+            <h1>Envíos a domicilio</h1>
+            <figure>
+                <img class="img_responsive" src="../assets/icons/envios.png" alt="Enviamos a toda la provincia">
+            </figure>
+            <p>En Coder Café preparamos tu pedido y te lo llevamos directamente a casa.</p>
         </section>
-        <section>
-            <h3>¿Cómo realizar un pedido?</h3>
+        <section class="contenido1_section">
+            <h2>¿Cómo realizar un pedido?</h2>
             <p>1. Consulta nuestro menu</p>
             <p>2. Elige tus productos favoritos</p>
             <p>3. Llámanos o realiza tu pedido por WhatsApp</p>
@@ -38,25 +46,31 @@
 
             <a href="../pages/menu.html">Ver el menu</a>
         </section>
-         <figure>
-          <img src="../assets/icons/envios.png"
-           alt="Enviamos a toda la provincia"
-           style="width: 60%;">
-         </figure>
-        <section>
-            <h3>Coste del envío</h3>
+        <section class="contenido1_section">
+            <h2>Coste del envío</h2>
             <p>Pedidos superiores a 20 € - Envío gratis</p>
             <p>Pedidos inferiores a 20 € - Envío 2,50 €</p>
         </section>
-        <section>
-            <h3>Pedidos</h3>
+        <section class="contenido1_section">
+            <h2>Pedidos</h2>
             <p>Teléfono: 922 000 000</p>
             <p>WhatsApp: 600 000 000</p>
         </section>
     </main>
-<footer>
-     Café Coder Copyright 2026
-     <a href="../index.html"> Volver al Inicio</a>
-</footer>
- </body>
+    <footer>
+        Coder Café Copyright 2026
+        <div class="redes_sociales">
+            <a href="https://instagram.com/" aria-label="Instagram_Coder_Café">
+                <img src="../assets/icons/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://facebook.com/" aria-label="Facebook_Coder_Café">
+                <img src="../assets/icons/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://wa.me/34600000000" aria-label="WhatsApp_Coder_Café">
+                <img src="../assets/icons/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </footer>
+</body>
+
 </html>
