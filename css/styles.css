@@ -106,15 +106,12 @@ a:visited {
     height: 40px;
     object-fit: contain;
 }
-/* Mobile firts: 1 columna */
-.inicio_grid
-.menu_grid
-.sb_grid
-.envios_grid
+/* Mobile first: 1 columna */
+.inicio_grid,
+.menu_grid,
+.sn_grid,
+.envios_grid,
 .contacto_grid {
-    *
-    min-width:0; 
-    margin-bottom: 0;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 1.5rem;
@@ -122,21 +119,77 @@ a:visited {
     max-width: 80rem;
     margin-inline: auto;
     padding: 1rem;
-    align-content: center;
 }
+
+.inicio_grid > section,
+.menu_grid > section,
+.sn_grid > section,
+.envios_grid > section,
+.contacto_grid > section {
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+/* Area de inicio */
+.inicio_grid {
+    grid-template-areas:
+        "bienvenida"
+        "descubre";
+}
+
+.inicio_grid > section:nth-child(1) {
+    grid-area: bienvenida;
+}
+
+.inicio_grid > section:nth-child(2) {
+    grid-area: descubre;
+}
+
+/* ARea de menu */
+.menu_grid {
+    grid-template-areas:
+        "cafes"
+        "desayunos"
+        "bebidas";
+}
+
+.menu_grid > section:nth-child(1) {
+    grid-area: cafes;
+}
+
+.menu_grid > section:nth-child(2) {
+    grid-area: desayunos;
+}
+
+.menu_grid > section:nth-child(3) {
+    grid-area: bebidas;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
     .inicio_grid,
-    .menu_grid
-    .sb_grid
-    .envios_grid
+    .menu_grid,
+    .sn_grid,
+    .envios_grid,
     .contacto_grid {
         padding: 2rem;
     }
 }
+
 /* Escritorio */
 @media (min-width: 1024px) {
     .navbar {
         flex-direction: row;
         padding: 1rem 2rem;
     }
+
+    .inicio_grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "bienvenida descubre";
+    }
+
+    .menu_grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-areas: "cafes desayunos bebidas";
+    }
+}
