@@ -56,6 +56,8 @@ main {
 /*Nav*/
 .navbar {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
@@ -104,3 +106,37 @@ a:visited {
     height: 40px;
     object-fit: contain;
 }
+/* Mobile firts: 1 columna */
+.inicio_grid
+.menu_grid
+.sb_grid
+.envios_grid
+.contacto_grid {
+    *
+    min-width:0; 
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding: 1rem;
+    align-content: center;
+}
+/* Tablet */
+@media (min-width: 768px) {
+    .inicio_grid,
+    .menu_grid
+    .sb_grid
+    .envios_grid
+    .contacto_grid {
+        padding: 2rem;
+    }
+}
+/* Escritorio */
+@media (min-width: 1024px) {
+    .navbar {
+        flex-direction: row;
+        padding: 1rem 2rem;
+    }
