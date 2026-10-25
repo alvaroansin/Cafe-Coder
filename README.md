@@ -44,4 +44,8 @@ Las dos páginas principales trabajadas para esta entrega son **inicio y menú**
 ## Nota al profesor 
 Lo que no me quedo claro es lo de optimizar las imágenes las pase a webp, no se si eso es lo que se buscaba.
 Creo que el resto esta completo.
+
+Gracias por la ayuda Tanto Abril como José
+Brindan grandes consejos y criticas constructivas y animan a seguir mejorando!
+
 Saludos Atte: Álvaro Ansín.
