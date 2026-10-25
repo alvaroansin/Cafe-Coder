@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     background-color: #0B1118;
     font-family: "PT Serif Caption", serif;
@@ -13,13 +14,22 @@ body {
     display: flex;
     flex-direction: column;
 }
-h1,h2,h3,h4,p,article,footer {
+
+h1,
+h2,
+h3,
+h4,
+p,
+article,
+footer {
     color: #38BDF8;
 }
+
 .SecundarioH2 {
     font-size: 2rem;
 }
-.img_responsive{
+
+.img_responsive {
     display: block;
     width: 60%;
     height: auto;
@@ -28,12 +38,16 @@ h1,h2,h3,h4,p,article,footer {
 
 /*Header*/
 h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    overflow-wrap: anywhere;
+    text-align: center;
 }
+
 main {
     padding: 2rem;
     flex: 1;
 }
+
 .contenido1_section {
     display: flex;
     flex-direction: column;
@@ -42,6 +56,7 @@ main {
     padding: 20px;
     margin-bottom: 20px;
 }
+
 .contenido1_section figure {
     width: 100%;
     display: flex;
@@ -49,10 +64,12 @@ main {
     align-items: center;
     gap: 0.5rem;
 }
+
 .contenido1_section ul {
     text-align: center;
     list-style: none;
 }
+
 /*Nav*/
 .navbar {
     display: flex;
@@ -63,13 +80,20 @@ main {
     gap: 2rem;
     padding: 1rem 2rem;
 }
+
+.marca {
+    max-width: 100%;
+}
+
 .marca_logo {
     display: block;
     width: auto;
-    max-width: 300px;
-    height: 90px;
+    max-width: 100%;
+    height: auto;
+    max-height: 90px;
     object-fit: contain;
 }
+
 .nav_menu {
     display: flex;
     align-items: center;
@@ -90,22 +114,28 @@ main {
 .nav_menu a:focus-visible {
     color: #38bdf8;
 }
+
 li,
 a:link {
     font-size: 1.5rem;
     color: #FF7A18;
 }
-a{text-decoration: none;}
+
+a {
+    text-decoration: none;
+}
 
 a:visited {
     color: #fccba8;
 }
+
 /*Footer*/
 .redes_sociales img {
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
+
 /* Mobile first: 1 columna */
 .inicio_grid,
 .menu_grid,
@@ -121,52 +151,68 @@ a:visited {
     padding: 1rem;
 }
 
-.inicio_grid > section,
-.menu_grid > section,
-.sn_grid > section,
-.envios_grid > section,
-.contacto_grid > section {
+.inicio_grid>section,
+.menu_grid>section,
+.sn_grid>section,
+.envios_grid>section,
+.contacto_grid>section {
     min-width: 0;
     margin-bottom: 0;
 }
 
-/* Area de inicio */
+/* ARea de inicio */
 .inicio_grid {
     grid-template-areas:
         "bienvenida"
         "descubre";
 }
 
-.inicio_grid > section:nth-child(1) {
+.inicio_grid>section:nth-child(1) {
     grid-area: bienvenida;
 }
 
-.inicio_grid > section:nth-child(2) {
+.inicio_grid>section:nth-child(2) {
     grid-area: descubre;
 }
 
-/* ARea de menu */
+/* Menú cel */
 .menu_grid {
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
+        "cabecera"
         "cafes"
         "desayunos"
         "bebidas";
+    align-content: start;
 }
 
-.menu_grid > section:nth-child(1) {
+.menu_cabecera {
+    grid-area: cabecera;
+    min-width: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.menu_cafes {
     grid-area: cafes;
 }
 
-.menu_grid > section:nth-child(2) {
+.menu_desayunos {
     grid-area: desayunos;
 }
 
-.menu_grid > section:nth-child(3) {
+.menu_bebidas {
     grid-area: bebidas;
+}
+
+.menu_cabecera .img_responsive {
+    width: 100%;
+    max-width: 18rem;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
+
     .inicio_grid,
     .menu_grid,
     .sn_grid,
@@ -190,6 +236,9 @@ a:visited {
 
     .menu_grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-template-areas: "cafes desayunos bebidas";
+        grid-template-areas:
+            "cabecera cabecera cabecera"
+            "cafes desayunos bebidas";
+        align-items: start;
     }
 }
