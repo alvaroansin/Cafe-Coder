@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,18 +14,14 @@
 
 <body>
     <header class="header1">
-        <nav class="navbar" aria-label="Navegación principal">
-            <a class="marca" href="../index.html">
-                <img src="../assets/icons/logo.webp" alt="Coder Café" class="marca_logo">
-            </a>
-
-            <ul class="nav_menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./menu.html">Menú</a></li>
-                <li><a href="./envios.html">Envíos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./sobrenosotros.html">Sobre nosotros</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar_cafe" data-bs-theme="dark" aria-label="Navegación principal">
+            <a class="navbar-brand marca" href="../index.html"><img src="../assets/icons/logo.webp" alt="Coder Café — Inicio" class="marca_logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar navegación"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="menuPrincipal"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+<li class="nav-item"><a class="nav-link active" aria-current="page" href="../pages/menu.html">Menú</a></li>
+<li class="nav-item"><a class="nav-link" href="../pages/envios.html">Envíos</a></li>
+<li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+<li class="nav-item"><a class="nav-link" href="../pages/sobrenosotros.html">Sobre nosotros</a></li></ul></div>
         </nav>
     </header>
     <main class="menu_grid">
@@ -33,9 +30,10 @@
             <figure>
                 <img class="img_responsive" src="../assets/icons/menu.webp" alt="Nuestro menú">
             </figure>
+            <button type="button" class="btn btn_cafe" data-bs-toggle="modal" data-bs-target="#modalAlergenos">Consultar alérgenos</button>
         </header>
 
-        <section class="contenido1_section menu_cafes">
+        <section class="card tarjeta_cafe contenido1_section menu_cafes">
             <h2>Cafés</h2>
             <ul>
                 <li>Espresso — 1,50 €</li>
@@ -44,7 +42,7 @@
             </ul>
         </section>
 
-        <section class="contenido1_section menu_desayunos">
+        <section class="card tarjeta_cafe contenido1_section menu_desayunos">
             <h2>Desayunos</h2>
             <ul>
                 <li>Tostada con tomate + café — 3,50 €</li>
@@ -53,7 +51,7 @@
             </ul>
         </section>
 
-        <section class="contenido1_section menu_bebidas">
+        <section class="card tarjeta_cafe contenido1_section menu_bebidas">
             <h2>Bebidas</h2>
             <ul>
                 <li>Agua — 1,20 €</li>
@@ -62,6 +60,13 @@
             </ul>
         </section>
     </main>
+<div class="modal fade" id="modalAlergenos" tabindex="-1" aria-labelledby="tituloAlergenos" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"><div class="modal-content modal_cafe">
+            <div class="modal-header"><h2 class="modal-title fs-4" id="tituloAlergenos">Información sobre alérgenos</h2><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
+            <div class="modal-body"><p>Antes de realizar tu pedido, consulta con nuestro personal los ingredientes y alérgenos de cada producto. Indícanos si tienes alguna alergia o intolerancia.</p><p>La información específica de cada preparación debe confirmarse con el personal.</p></div>
+            <div class="modal-footer"><button type="button" class="btn btn_cafe" data-bs-dismiss="modal">Entendido</button></div>
+        </div></div>
+    </div>
     <footer>
         Coder Café Copyright 2026
         <div class="redes_sociales">
@@ -76,6 +81,7 @@
             </a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -18,14 +18,13 @@ Proyecto de una cafetería ficticia para el curso de Desarrollo Web de Coderhous
 - CSS Grid con `grid-template-areas` y `grid-area` para organizar inicio y menú.
 - Media queries para adaptar el diseño a distintos tamaños de pantalla.
 - Google Fonts para la tipografía PT Serif Caption, con una fuente serif como alternativa.
+- Bootstrap
 
 ## Diseño responsive
 
 Trabajé con un enfoque mobile-first: el diseño base tiene una sola columna y las secciones se apilan en pantallas pequeñas.
 
 A partir de 768 px aumenta el espacio interior de los contenedores. Desde 1024 px, el inicio pasa a dos columnas y el menú a tres. Para las columnas utilicé la unidad `fr` y para separar los elementos usé `gap`.
-
-Las dos páginas principales trabajadas para esta entrega son **inicio y menú**. El resto comparte la misma hoja de estilos y también tiene avances de diseño.
 
 ## Organización
 
@@ -44,6 +43,7 @@ Las dos páginas principales trabajadas para esta entrega son **inicio y menú**
 ## Nota al profesor 
 Lo que no me quedo claro es lo de optimizar las imágenes las pase a webp, no se si eso es lo que se buscaba.
 Creo que el resto esta completo.
+Trate de corregir todo lo que me pidieron en la anterior entrega.
 
 Gracias por la ayuda Tanto Abril como José
 Brindan grandes consejos y criticas constructivas y animan a seguir mejorando!

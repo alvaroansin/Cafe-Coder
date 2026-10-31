@@ -70,55 +70,20 @@ main {
     list-style: none;
 }
 
-/*Nav*/
-.navbar {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem 2rem;
-}
-
-.marca {
-    max-width: 100%;
-}
-
-.marca_logo {
-    display: block;
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 90px;
-    object-fit: contain;
-}
-
-.nav_menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 1rem;
-    list-style: none;
-}
-
-.nav_menu a {
-    display: block;
-    padding: 0.5rem 0.75rem;
-    color: #ff7a18;
-    text-decoration: none;
-}
-
-.nav_menu a:hover,
-.nav_menu a:focus-visible {
-    color: #38bdf8;
-}
+/* Navbar Bootstrap: su Collapse controla el menú móvil */
+.navbar_cafe { padding: 1rem 1.25rem; gap: 1rem; border-bottom: 1px solid #294052; }
+.navbar_cafe .marca { max-width: 55%; }
+.marca_logo { display: block; width: auto; max-width: 100%; height: auto; max-height: 90px; object-fit: contain; }
+.navbar_cafe .navbar-nav { gap: .5rem; }
+.navbar_cafe .nav-link { color: #ff7a18; font-size: 1.1rem; padding: .5rem .75rem; }
+.navbar_cafe .nav-link:visited { color: #ff7a18; }
+.navbar_cafe .nav-link:hover, .navbar_cafe .nav-link:focus-visible, .navbar_cafe .nav-link.active { color: #38bdf8; }
+.navbar_cafe .navbar-toggler:focus-visible { outline: 3px solid #38bdf8; }
 
 li,
 a:link {
     font-size: 1.5rem;
-    color: #FF7A18;
+    color: #000000;
 }
 
 a {
@@ -126,7 +91,7 @@ a {
 }
 
 a:visited {
-    color: #fccba8;
+    color: #38bdf8
 }
 
 /*Footer*/
@@ -210,6 +175,64 @@ a:visited {
     max-width: 18rem;
 }
 
+/* Contacto: cel */
+.contacto_grid {
+    grid-template-areas:
+        "presentacion"
+        "datos";
+    align-content: start;
+}
+
+.contacto_presentacion {
+    grid-area: presentacion;
+}
+
+.contacto_datos {
+    grid-area: datos;
+}
+
+/* Envios: cel */
+.envios_grid {
+    grid-template-areas:
+        "presentacion"
+        "pasos"
+        "coste"
+        "pedidos";
+    align-content: start;
+}
+
+.envios_presentacion {
+    grid-area: presentacion;
+}
+
+.envios_pasos {
+    grid-area: pasos;
+}
+
+.envios_coste {
+    grid-area: coste;
+}
+
+.envios_pedidos {
+    grid-area: pedidos;
+}
+
+/* Sobre nosotros: cel */
+.sn_grid {
+    grid-template-areas:
+        "historia"
+        "filosofia";
+    align-content: start;
+}
+
+.sn_historia {
+    grid-area: historia;
+}
+
+.sn_filosofia {
+    grid-area: filosofia;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
 
@@ -224,10 +247,6 @@ a:visited {
 
 /* Escritorio */
 @media (min-width: 1024px) {
-    .navbar {
-        flex-direction: row;
-        padding: 1rem 2rem;
-    }
 
     .inicio_grid {
         grid-template-columns: 2fr 1fr;
@@ -241,4 +260,43 @@ a:visited {
             "cafes desayunos bebidas";
         align-items: start;
     }
+
+     /* Contacto: escritorio */
+    .contacto_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: "presentacion datos";
+        align-items: center;
+    }
+
+    /* Envios: escritorio */
+    .envios_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "presentacion pasos"
+            "coste pedidos";
+        align-items: start;
+    }
+
+    /* Sobre nosotros: escritorio */
+    .sn_grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "historia filosofia";
+        align-items: center;
+    }
 }
+/* bootstrap*/
+body { color: #38bdf8; }
+h1, h2, h3, h4 { font-weight: 700; }
+figure, p, ul { margin-bottom: 0; }
+ul { padding-left: 0; }
+.carrusel_cafe { width: 100%; max-width: 38rem; overflow: hidden; border-radius: 1rem; border: 1px solid #294052; }
+.carrusel_cafe .carousel-item img { aspect-ratio: 3 / 2; height: auto; object-fit: contain; background: #0b1118; }
+.carrusel_cafe .carousel-control-prev, .carrusel_cafe .carousel-control-next { background-color: #0b111880; width: 12%; }
+.tarjeta_cafe, .modal_cafe { background-color: #013f7c; color: #38bdf8; border: 1px solid #294052; border-radius: 1rem; }
+.tarjeta_cafe h2 { color: #ff7a18; }
+.tarjeta_cafe li { font-size: 1.1rem; line-height: 1.9; }
+.btn_cafe, .btn_cafe:visited { background: #ff7a18; border: 1px solid #ff7a18; color: #0b1118; font-size: 1rem; font-weight: 700; white-space: normal; }
+.btn_cafe:hover, .btn_cafe:focus-visible { background: #38bdf8; border-color: #38bdf8; color: #0b1118; }
+.btn_cafe:active { background: #fccba8; }
+footer { padding: 1.25rem; text-align: center; }
+.redes_sociales { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }

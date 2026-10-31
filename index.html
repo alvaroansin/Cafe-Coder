@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,27 +14,37 @@
 
 <body>
     <header class="header1">
-        <nav class="navbar" aria-label="Navegación principal">
-            <a class="marca" href="./index.html">
-                <img src="./assets/icons/logo.webp" alt="Coder Café" class="marca_logo">
-            </a>
-
-            <ul class="nav_menu">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/menu.html">Menú</a></li>
-                <li><a href="./pages/envios.html">Envíos</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-                <li><a href="./pages/sobrenosotros.html">Sobre nosotros</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar_cafe" data-bs-theme="dark" aria-label="Navegación principal">
+            <a class="navbar-brand marca" href="./index.html"><img src="./assets/icons/logo.webp" alt="Coder Café — Inicio" class="marca_logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar navegación"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="menuPrincipal"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html">Inicio</a></li>
+<li class="nav-item"><a class="nav-link" href="./pages/menu.html">Menú</a></li>
+<li class="nav-item"><a class="nav-link" href="./pages/envios.html">Envíos</a></li>
+<li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
+<li class="nav-item"><a class="nav-link" href="./pages/sobrenosotros.html">Sobre nosotros</a></li></ul></div>
         </nav>
     </header>
     <main class="inicio_grid">
         <section class="contenido1_section">
             <h1>¡Bienvenidos!</h1>
-            <figure>
-                <img class="img_responsive" src="./assets/icons/codercafe.webp" alt="Vista de nuestra sucursal">
-                <figcaption>Nuestra sucursal.</figcaption>
-            </figure>
+            <div id="carruselCafe" class="carousel slide carrusel_cafe" aria-label="Imágenes de Coder Café">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselCafe" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Nuestra sucursal"></button>
+                    <button type="button" data-bs-target="#carruselCafe" data-bs-slide-to="1" aria-label="Descubre nuestra historia"></button>
+                    <button type="button" data-bs-target="#carruselCafe" data-bs-slide-to="2" aria-label="Exterior de Coder Café con mesas en la terraza"></button>
+                    <button type="button" data-bs-target="#carruselCafe" data-bs-slide-to="3" aria-label="Interior de Coder Café con mesas y luces circulares"></button>
+                    <button type="button" data-bs-target="#carruselCafe" data-bs-slide-to="4" aria-label="Barra de Coder Café con cafetera profesional al fondo"></button>
+                    <button type="button" data-bs-target="#carruselCafe" data-bs-slide-to="5" aria-label="Camarero de Coder Café atendiendo una mesa"></button>
+                </div>
+                <div class="carousel-inner"><div class="carousel-item active"><img src="./assets/icons/codercafe.webp" class="d-block w-100" alt="Nuestra sucursal"></div><div class="carousel-item"><img src="./assets/icons/nuestrahistoria.webp" class="d-block w-100" alt="Descubre nuestra historia"></div>
+                    <div class="carousel-item"><img src="./assets/images/exterior-terraza.webp" class="d-block w-100" width="1536" height="1024" alt="Exterior de Coder Café con mesas en la terraza"></div>
+                    <div class="carousel-item"><img src="./assets/images/interior.webp" class="d-block w-100" width="1536" height="1024" alt="Interior de Coder Café con mesas y luces circulares"></div>
+                    <div class="carousel-item"><img src="./assets/images/barra-cafetera.webp" class="d-block w-100" width="1536" height="1024" alt="Barra de Coder Café con cafetera profesional al fondo"></div>
+                    <div class="carousel-item"><img src="./assets/images/camarero.webp" class="d-block w-100" width="1536" height="1024" alt="Camarero de Coder Café atendiendo una mesa"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselCafe" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Anterior</span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselCafe" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Siguiente</span></button>
+            </div>
             <p>Bienvenido a Coder Café. Disfruta de nuestros
                 cafés, desayunos, bocadillos y productos frescos.</p>
         </section>
@@ -41,7 +52,7 @@
             <h2>Descubre nuestra cafetería</h2>
             <p>Visita nuestro menú para conocer todos nuestros productos.</p>
 
-            <a href="./pages/menu.html">Ver nuestro menú</a>
+            <a class="btn btn_cafe" href="./pages/menu.html">Ver nuestro menú</a>
         </section>
     </main>
     <footer>
@@ -58,6 +69,7 @@
             </a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 
 </html>
