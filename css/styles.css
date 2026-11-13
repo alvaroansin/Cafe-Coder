@@ -80,7 +80,11 @@ main {
 .navbar_cafe .nav-link:hover, .navbar_cafe .nav-link:focus-visible, .navbar_cafe .nav-link.active { color: #38bdf8; }
 .navbar_cafe .navbar-toggler:focus-visible { outline: 3px solid #38bdf8; }
 
-li,
+li {
+    font-size: 1.5rem;
+    color: inherit;
+}
+
 a:link {
     font-size: 1.5rem;
     color: #000000;
