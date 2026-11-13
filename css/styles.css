@@ -1,0 +1,302 @@
+/* Estilos Generales*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0B1118;
+    font-family: "PT Serif Caption", serif;
+    font-weight: 400;
+    font-style: italic;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+article,
+footer {
+    color: #38BDF8;
+}
+
+.SecundarioH2 {
+    font-size: 2rem;
+}
+
+.img_responsive {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin-inline: auto;
+}
+
+/*Header*/
+h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+main {
+    padding: 2rem;
+    flex: 1;
+}
+
+.contenido1_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.contenido1_section figure {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contenido1_section ul {
+    text-align: center;
+    list-style: none;
+}
+
+/* Navbar Bootstrap: su Collapse controla el menú móvil */
+.navbar_cafe { padding: 1rem 1.25rem; gap: 1rem; border-bottom: 1px solid #294052; }
+.navbar_cafe .marca { max-width: 55%; }
+.marca_logo { display: block; width: auto; max-width: 100%; height: auto; max-height: 90px; object-fit: contain; }
+.navbar_cafe .navbar-nav { gap: .5rem; }
+.navbar_cafe .nav-link { color: #ff7a18; font-size: 1.1rem; padding: .5rem .75rem; }
+.navbar_cafe .nav-link:visited { color: #ff7a18; }
+.navbar_cafe .nav-link:hover, .navbar_cafe .nav-link:focus-visible, .navbar_cafe .nav-link.active { color: #38bdf8; }
+.navbar_cafe .navbar-toggler:focus-visible { outline: 3px solid #38bdf8; }
+
+li,
+a:link {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #38bdf8
+}
+
+/*Footer*/
+.redes_sociales img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Mobile first: 1 columna */
+.inicio_grid,
+.menu_grid,
+.sn_grid,
+.envios_grid,
+.contacto_grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding: 1rem;
+}
+
+.inicio_grid>section,
+.menu_grid>section,
+.sn_grid>section,
+.envios_grid>section,
+.contacto_grid>section {
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+/* ARea de inicio */
+.inicio_grid {
+    grid-template-areas:
+        "bienvenida"
+        "descubre";
+}
+
+.inicio_grid>section:nth-child(1) {
+    grid-area: bienvenida;
+}
+
+.inicio_grid>section:nth-child(2) {
+    grid-area: descubre;
+}
+
+/* Menú cel */
+.menu_grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "cabecera"
+        "cafes"
+        "desayunos"
+        "bebidas";
+    align-content: start;
+}
+
+.menu_cabecera {
+    grid-area: cabecera;
+    min-width: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.menu_cafes {
+    grid-area: cafes;
+}
+
+.menu_desayunos {
+    grid-area: desayunos;
+}
+
+.menu_bebidas {
+    grid-area: bebidas;
+}
+
+.menu_cabecera .img_responsive {
+    width: 100%;
+    max-width: 18rem;
+}
+
+/* Contacto: cel */
+.contacto_grid {
+    grid-template-areas:
+        "presentacion"
+        "datos";
+    align-content: start;
+}
+
+.contacto_presentacion {
+    grid-area: presentacion;
+}
+
+.contacto_datos {
+    grid-area: datos;
+}
+
+/* Envios: cel */
+.envios_grid {
+    grid-template-areas:
+        "presentacion"
+        "pasos"
+        "coste"
+        "pedidos";
+    align-content: start;
+}
+
+.envios_presentacion {
+    grid-area: presentacion;
+}
+
+.envios_pasos {
+    grid-area: pasos;
+}
+
+.envios_coste {
+    grid-area: coste;
+}
+
+.envios_pedidos {
+    grid-area: pedidos;
+}
+
+/* Sobre nosotros: cel */
+.sn_grid {
+    grid-template-areas:
+        "historia"
+        "filosofia";
+    align-content: start;
+}
+
+.sn_historia {
+    grid-area: historia;
+}
+
+.sn_filosofia {
+    grid-area: filosofia;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+
+    .inicio_grid,
+    .menu_grid,
+    .sn_grid,
+    .envios_grid,
+    .contacto_grid {
+        padding: 2rem;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+
+    .inicio_grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "bienvenida descubre";
+    }
+
+    .menu_grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-areas:
+            "cabecera cabecera cabecera"
+            "cafes desayunos bebidas";
+        align-items: start;
+    }
+
+     /* Contacto: escritorio */
+    .contacto_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas: "presentacion datos";
+        align-items: center;
+    }
+
+    /* Envios: escritorio */
+    .envios_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "presentacion pasos"
+            "coste pedidos";
+        align-items: start;
+    }
+
+    /* Sobre nosotros: escritorio */
+    .sn_grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: "historia filosofia";
+        align-items: center;
+    }
+}
+/* bootstrap*/
+body { color: #38bdf8; }
+h1, h2, h3, h4 { font-weight: 700; }
+figure, p, ul { margin-bottom: 0; }
+ul { padding-left: 0; }
+.carrusel_cafe { width: 100%; max-width: 38rem; overflow: hidden; border-radius: 1rem; border: 1px solid #294052; }
+.carrusel_cafe .carousel-item img { aspect-ratio: 3 / 2; height: auto; object-fit: contain; background: #0b1118; }
+.carrusel_cafe .carousel-control-prev, .carrusel_cafe .carousel-control-next { background-color: #0b111880; width: 12%; }
+.tarjeta_cafe, .modal_cafe { background-color: #013f7c; color: #38bdf8; border: 1px solid #294052; border-radius: 1rem; }
+.tarjeta_cafe h2 { color: #ff7a18; }
+.tarjeta_cafe li { font-size: 1.1rem; line-height: 1.9; }
+.btn_cafe, .btn_cafe:visited { background: #ff7a18; border: 1px solid #ff7a18; color: #0b1118; font-size: 1rem; font-weight: 700; white-space: normal; }
+.btn_cafe:hover, .btn_cafe:focus-visible { background: #38bdf8; border-color: #38bdf8; color: #0b1118; }
+.btn_cafe:active { background: #fccba8; }
+footer { padding: 1.25rem; text-align: center; }
+.redes_sociales { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
