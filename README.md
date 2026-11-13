@@ -2,6 +2,12 @@
 
 Proyecto de una cafetería ficticia para el curso de Desarrollo Web de Coderhouse. La idea es ir aplicando lo que voy aprendiendo de HTML y CSS para darle forma al sitio.
 
+## Sitio publicado
+
+Podés visitar el proyecto en GitHub Pages:
+
+https://alvaroansin.github.io/Cafe-Coder/
+
 ## Páginas del sitio
 
 - **Inicio:** presentación de la cafetería.
@@ -32,6 +38,7 @@ A partir de 768 px aumenta el espacio interior de los contenedores. Desde 1024 p
 - `pages/`: menú, envíos, contacto y sobre nosotros.
 - `css/styles.css`: estilos compartidos por las cinco páginas.
 - `assets/icons/`: imágenes y logos del sitio.
+- `assets/images/`: fotografías del carrusel. 
 
 ## Cómo abrir el proyecto
 
@@ -41,11 +48,7 @@ A partir de 768 px aumenta el espacio interior de los contenedores. Desde 1024 p
 
 
 ## Nota al profesor 
-Lo que no me quedo claro es lo de optimizar las imágenes las pase a webp, no se si eso es lo que se buscaba.
-Creo que el resto esta completo.
-Trate de corregir todo lo que me pidieron en la anterior entrega.
-
-Gracias por la ayuda Tanto Abril como José
-Brindan grandes consejos y criticas constructivas y animan a seguir mejorando!
+Muchas gracias por las clases tan bien explicadas, me atrase un poco en las entregas por temas, médicos y laborales.
+En breve me pongo al dia !
 
 Saludos Atte: Álvaro Ansín.
